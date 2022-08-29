@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .auth{
     /* Auto layout */
 
@@ -86,189 +90,175 @@
     flex-grow: 0;
 }
 
-
 /******* Sidemenu *******/
 .side-menu {
-    position: absolute;
-    width: 293px;
-    background: #6813D5;
-    height: 982px;
-    left: 0px;
-    top: 0px;
-  }
+  position: absolute;
+  width: 293px;
+  background: #6813D5;
+  height: 982px;
+  left: 0px;
+  top: 0px;
+}
 
-  #mentesa{
-    /* Mente Sã */
-    position: absolute;
-    width: 179px;
-    height: 49px;
-    left: 21px;
-    top: 22px;
+#mentesa{
+  /* Mente Sã */
+  position: absolute;
+  width: 179px;
+  height: 49px;
+  left: 21px;
+  top: 22px;
+  left: 16px;
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 49px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 49px;
 
-    color: #FFFFFF;
-  }
-  
-  #bem_vindo{
-    /* Bem vindo (a), */
-    width: 90px;
-    height: 16px;
+  color: #FFFFFF;
+}
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
+#bem_vindo{
+  width: 90px;
+  height: 16px;
+  top: 22px;
 
-    color: #FFFFFF;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 
+  color: #FFFFFF;
+}
 
-    /* Inside auto layout */
+#name_profissional{        
+  width: 77px;
+  height: 16px;
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  }
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
 
-  #name_profissional{        
-    width: 77px;
-    height: 16px;
+  color: #FFFFFF;
+}
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
+#sidebar-menu > ul > li > a {
+  top: 140px;
+  width: 92px;
+  height: 28px;
+  left: 10px;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-family: 'Roboto';
+  font-style: normal;
+  text-decoration: none;
 
-    color: #FFFFFF;
+}
 
+#sidebar-menu > ul > li > a:hover, #sidebar-menu > ul > li > a:focus, #sidebar-menu > ul > li > a:active {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
 
-    /* Inside auto layout */
+  width: 293px;
+  height: 48px;
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  }
+  color: #6813D5;
+  background: #FFFFFF;
+  border-radius: 0px 48px 48px 0px;
 
-  #sidebar-menu > ul > li > a {
-    top: 260px;
-    color: #fff;
-    display: block;
-    padding: 13px 20px;
-    font-size: 14px;
-    position: relative;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  #sidebar-menu > ul > li > a:hover, #sidebar-menu > ul > li > a:focus, #sidebar-menu > ul > li > a:active {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  #sidebar-menu > ul > li > a > span {
-    margin-left: 7px;
-  }
-  
-  #sidebar-menu > ul > li > a i {
-    line-height: 1;
-    width: 20px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  
-  #sidebar-menu > ul > li > a .badge {
-    margin-top: 3px;
-  }
-  
-  #sidebar-menu > ul > li > a.mm-active {
-    color: #fff !important;
-    background-color: #fff;
-  }
-  
-  #sidebar-menu .menu-title {
-    padding: 12px 20px !important;
-    letter-spacing: 1px;
-    font-size: 10px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #fff;
-  }
+  /* Inside auto layout */
 
-  /******* Metis Menu css *******/
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+} 
+
+/******* Content Page *******/
+.content-page {
+  margin-left: 240px;
+  overflow: hidden;
+}
+
+.content-page .content {
+  padding: 0 15px 10px 15px;
+  margin-top: 70px;
+  margin-bottom: 60px;
+}
+
+/******* Metis Menu css *******/
 .metismenu {
-    padding: 0;
-  }
-  
-  .metismenu ul {
-    padding: 0;
-  }
-  
-  .metismenu ul li {
-    list-style: none;
-  }  
-  
-  .grid-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 32px;
-    gap: 16px;
+  padding: 0;
+}
 
-    position: absolute;
-    width: 226px;
-    height: 178px;
-    left: 387px;
-    top: 91px;
+.metismenu ul {
+  padding: 0;
+}
 
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-  }
-  
-  .item-title {
-    width: 162px;
-    height: 42px;
+.metismenu ul li {
+  list-style: none;
+}  
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  gap: 16px;
 
-    color: #666666;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
 
+.item-title {
+  width: 162px;
+  height: 42px;
 
-    /* Inside auto layout */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  }
-  
-  .item-number {
-    width: 28px;
-    height: 56px;
+  color: #666666;
+}
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 56px;
+.item-number {
+  width: 28px;
+  height: 56px;
 
-    color: #666666;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
 
+  color: #666666;
+}
 
-    /* Inside auto layout */
+#buttonPlus{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 32px;
+  gap: 16px;
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-  }
+  width: 200px;
+  height: 43px;
+
+  background: #6813D5;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}

@@ -8,14 +8,15 @@ function Sidebar() {
    <>    
     <div className='left side-menu'>
       <div id='mentesa'>
-          <h4>Mente Sã</h4>
-            <div id='bem_vindo'>
-              <span>Bem-vindo (a)</span>
-                <div id='name_profissional'>
-                  <span>Dr. Angelo</span>
-                </div>
-            </div>          
+          Mente Sã   
+          <div id='bem_vindo' style={{}}>
+            Bem-vindo (a)
+              <div id='name_profissional'>
+                Dr. Angelo
+              </div>
+          </div>                   
       </div>
+      
       <div id="sidebar-menu">    
         <ul className="metismenu">
             <li >                        

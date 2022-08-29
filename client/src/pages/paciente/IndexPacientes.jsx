@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import {Form, Modal, Button } from 'react-bootstrap';
+import FormPaciente from '../../components/FormPaciente';
 
+function IndexPacientes() {
 
-function FormPaciente() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -10,9 +13,15 @@ function FormPaciente() {
 
   return (
     <div>
+        <Button id='buttonPlus' onClick={handleShow}>
+        <FontAwesomeIcon icon={faPlus} /> Novo Paciente
+        </Button>
+        
+
         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Mente Sã</Modal.Title>
+          
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -46,4 +55,4 @@ function FormPaciente() {
   )
 }
 
-export default FormPaciente
+export default IndexPacientes

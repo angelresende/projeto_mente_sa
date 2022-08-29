@@ -6,6 +6,7 @@ import Dashboard from './pages/dashboard/Dashboard'
 
 import './assets/styles/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import IndexPacientes from './pages/paciente/IndexPacientes'
 
 
 function App() {
