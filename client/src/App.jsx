@@ -12,7 +12,7 @@ import IndexPacientes from './pages/paciente/IndexPacientes'
 function App() {
   return (
     <>
-    <Dashboard />
+    <Auth />
     </>
   )
 }
