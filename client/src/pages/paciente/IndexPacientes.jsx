@@ -1,25 +1,21 @@
-import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import {Form, Modal, Button } from 'react-bootstrap';
-import FormPaciente from '../../components/FormPaciente';
+import React from 'react'
+
+import Sidebar from '../../components/Sidebar';
+import TablePacientes from '../../components/TablePaciente';
 
 function IndexPacientes() {
 
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
-    <div>
-        <Button id='buttonPlus' onClick={handleShow}>
-        <FontAwesomeIcon icon={faPlus} /> Novo Paciente
-        </Button>    
-        
+    <>
+      <Sidebar/>
+      <div className='container-xl'>
+        <div className='table-wrapper'>
+          <TablePacientes />
+        </div>
+      </div> 
                    
         
-    </div>
+    </>
   )
 }
 
