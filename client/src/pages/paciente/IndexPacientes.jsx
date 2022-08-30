@@ -15,7 +15,9 @@ function IndexPacientes() {
     <div>
         <Button id='buttonPlus' onClick={handleShow}>
         <FontAwesomeIcon icon={faPlus} /> Novo Paciente
-        </Button>               
+        </Button>    
+        
+                   
         
     </div>
   )

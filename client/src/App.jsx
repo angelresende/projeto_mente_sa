@@ -1,18 +1,12 @@
-import { useState } from 'react'
-
-import Auth from './pages/auth/Auth'
-import Sidebar from './components/Sidebar'
-import Dashboard from './pages/dashboard/Dashboard'
-
-import './assets/styles/style.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react'
+import History from "./History"
 import IndexPacientes from './pages/paciente/IndexPacientes'
-
+import IndexSessoes from './pages/sessoes/IndexSessoes'
 
 function App() {
   return (
     <>
-    <Auth />
+    <IndexPacientes />
     </>
   )
 }
