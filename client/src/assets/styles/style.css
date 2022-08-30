@@ -294,6 +294,25 @@ body {
 
 }
 
+#buttonLogin{
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 16px;
+
+  width: 104px;
+  height: 51px;
+
+
+  background: rgba(104, 19, 213, 0.5);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
 .table-wrapper{
   margin: 90px 0;
   background: #fff;
@@ -467,7 +486,7 @@ table.table .avatar{
 }
 
 .form-check-input:checked {
-  background-color: #00995D !important;
-  border-color: #00995D !important;
+  background-color: #6813D4 !important;
+  border-color: #6813D4 !important;
 }
 
