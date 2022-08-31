@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faEdit, faTrash, faEye } from '@fortawesome/free-solid-svg-icons'
-import { Modal, Button, Table  } from 'react-bootstrap';
+import { faPlus, faEdit, faTrash, faEye, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { Modal, Button, Table, Row, Col, Form  } from 'react-bootstrap';
 import FormPaciente from './FormPaciente';
 
 
@@ -13,24 +13,32 @@ function TablePacientes() {
 
   return (
     <>
+    
     <div className='table-title'>
-      <div className='row'>
-      <div className='col-sm-6'>
+      <Row>
+        <Col>
           <h4 style={{color:'#666666', fontSize: 32}}>Meus Pacientes</h4>
-        </div>
-        <div className="col-sm-4">
-        </div>      
-        <div className='col-sm-2'>
+        </Col>
+        <Col>
+        <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Pesquisar"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success"><FontAwesomeIcon icon={faSearch}/></Button>
+          </Form>
+        </Col>      
+        <Col>
             <Button className='btn btn-success float-right' id='buttonPlus' onClick={handleShow}>
                 <FontAwesomeIcon icon={faPlus} /> Novo Paciente
             </Button> 
-        </div>
-      </div>
+        </Col>
+      </Row>
     </div>
     
-
-     
-
+    <Row>
     <Table  className='table table-striped table-hover'>
       <thead style={{background: '#6813D5'}}>
         <tr>
@@ -59,7 +67,11 @@ function TablePacientes() {
         </tr>
         
       </tbody>
-    </Table >  
+    </Table > 
+    </Row>
+     
+
+    
 
         
         

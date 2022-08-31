@@ -7,10 +7,14 @@ function IndexPacientes() {
 
   return (
     <>
-      <Sidebar/>
-      <div className='container-xl'>
-        <div className='table-wrapper'>
-          <TablePacientes />
+      <Sidebar />
+      <div className='content-page'>
+        <div className="content">
+          <div className="container-fluid">
+            <div className='table-wrapper'>          
+              <TablePacientes />
+            </div>
+          </div>
         </div>
       </div> 
                    

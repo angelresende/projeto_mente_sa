@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from '../../components/Sidebar'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 function Dashboard() {
   return (
@@ -9,49 +9,49 @@ function Dashboard() {
     <Sidebar />
     <div className="content-page">
         <div className="content">
-          <Row className="justify-content-md-center">
-              <Col sm={3}>
-                <div className='grid-item'>
-                    <span className='item-title'>Sessões agendadas (dia)</span>
-                    <span className='item-number'>5</span>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className='grid-item'>
-                  <span className='item-title'>Sessões agendadas (mês)</span>
-                  <span className='item-number'>15</span>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className='grid-item'>
-                  <span className='item-title'>Sessões canceladas (mês)</span>
-                  <span className='item-number'>1</span>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className='grid-item'>
-                  <span className='item-title'>Total de pacientes cadastrados</span>
-                  <span className='item-number'>61152</span>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className='grid-item'>
-                  <span className='item-title'>Total de sessões (individuais)</span>
-                  <span className='item-number'>5</span>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className='grid-item'>
-                  <span className='item-title'>Total de sessões (dupla)</span>
-                  <span className='item-number'>5</span>
-                </div>
-              </Col>
-              <Col sm={3}>
-                <div className='grid-item'>
-                  <span className='item-title'>Total de sessões (grupo)</span>
-                  <span className='item-number'>5</span>
-                </div>
-              </Col>  
+          <Row className="flex">
+            <Card style={{ width: '13rem' }}>
+              <Card.Body>
+                <Card.Title className='item-title'><strong>Sessões agendadas (dia)</strong></Card.Title>
+                <Card.Text className='item-number'>5</Card.Text>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '13rem', marginLeft:12 }}>
+              <Card.Body>
+                <Card.Title className='item-title'><strong>Sessões agendadas (mês)</strong></Card.Title>
+                <Card.Text className='item-number'>15</Card.Text>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '13rem', marginLeft:12 }}>
+              <Card.Body>
+                <Card.Title className='item-title'><strong>Sessões canceladas (mês)</strong></Card.Title>
+                <Card.Text className='item-number'>1</Card.Text>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '13rem', marginLeft:12 }}>
+              <Card.Body>
+                <Card.Title className='item-title'><strong>Total de pacientes cadastrados</strong></Card.Title>
+                <Card.Text className='item-number'>65152</Card.Text>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '13rem', marginTop:14}}>
+              <Card.Body>
+                <Card.Title className='item-title'><strong>Total de sessões (individuais)</strong></Card.Title>
+                <Card.Text className='item-number'>5</Card.Text>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '13rem', marginLeft:12, marginTop:14 }}>
+              <Card.Body>
+                <Card.Title className='item-title'><strong>Total de sessões (dupla)</strong></Card.Title>
+                <Card.Text className='item-number'>5</Card.Text>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '13rem', marginLeft:12, marginTop:14}}>
+              <Card.Body>
+                <Card.Title className='item-title'><strong>Total de sessões (grupo)</strong></Card.Title>
+                <Card.Text className='item-number'>5</Card.Text>
+              </Card.Body>
+            </Card>            
           </Row>           
         </div>
       </div>
