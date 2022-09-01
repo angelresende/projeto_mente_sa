@@ -9,7 +9,7 @@ import IndexSessoes from './pages/sessoes/IndexSessoes'
 function App() {
   return (
     <>
-    <IndexPacientes />
+    <Auth />
     </>
   )
 }
