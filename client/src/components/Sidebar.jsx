@@ -11,7 +11,7 @@ function Sidebar() {
           Mente Sã   
           <div id='bem_vindo' style={{}}>
             Bem-vindo (a)
-              <div id='name_profissional'>
+              <div id='name_professional'>
                 Dr. Angelo
               </div>
           </div>                   
@@ -24,7 +24,7 @@ function Sidebar() {
             </li>
             
             <li>
-                <a href="/pacientes" className="waves-effect"><FontAwesomeIcon icon={faUser} /> Pacientes</a>
+                <a href="/patients" className="waves-effect"><FontAwesomeIcon icon={faUser} /> Pacientes</a>
             </li>
                             
             <li>

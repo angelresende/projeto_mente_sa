@@ -30,7 +30,7 @@ function Dashboard() {
             </Card>
             <Card style={{ width: '13rem', marginLeft:12 }}>
               <Card.Body>
-                <Card.Title className='item-title'><strong>Total de pacientes cadastrados</strong></Card.Title>
+                <Card.Title className='item-title'><strong>Total de patients cadastrados</strong></Card.Title>
                 <Card.Text className='item-number'>65152</Card.Text>
               </Card.Body>
             </Card>

@@ -16,11 +16,16 @@
         }
     ],
     "paths":{
-        "/":{
+        "/professionals":{
             "post":{
-                "summary": "Cadastro de profissionais",
-                "description": "Essa rota será responsável por cadastrar um novo profissional no sistema."
-            }
+                "summary": "Cadastro de profissionais dentro do sistema",
+                "description": "Essa rota será responsável por cadastrar os profissionais no sistema."
+            },
+            "get":{
+                "summary": "Lista de profissionais cadastros dentro do sistema",
+                "description": "Essa rota será responsável por apresentar os profissionais cadastrados no sistema."
+            }            
+
         }
     }
    

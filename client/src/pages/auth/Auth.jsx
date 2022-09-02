@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {Form, Button, Col, Modal, Card } from 'react-bootstrap';
-import FormProfissional from '../../components/FormProfissional';
+import FormProfessional from '../../components/FormProfessional';
 
 function Auth() {
   const [show, setShow] = useState(false);
@@ -47,9 +47,9 @@ function Auth() {
           <Modal.Title style={{color: '#6813D5', textAlign: 'center', fontSize:32}}><strong>Mente Sã</strong></Modal.Title>
         </Modal.Header>          
         <Modal.Body>
-          <p style={{color: '#6813D5', fontSize:24}}>Cadastro do profissional</p>
+          <p style={{color: '#6813D5', fontSize:24}}>Cadastro do professional</p>
           <span style={{color: '#AAAAAA', fontSize:16}}>Crie sua conta e comece a desfrutar do nosso sistema</span>
-          <FormProfissional />
+          <FormProfessional />
         </Modal.Body>
         <Modal.Footer>
           <Button id='buttonSave' onClick={handleClose}>

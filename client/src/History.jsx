@@ -7,8 +7,8 @@ import Dashboard from './pages/dashboard/Dashboard'
 
 import './assets/styles/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import IndexPacientes from './pages/paciente/IndexPacientes'
-import IndexSessoes from './pages/sessoes/IndexSessoes'
+import IndexPatient from './pages/patient/IndexPatient'
+import IndexSession from './pages/sessoes/IndexSession'
 
 function History() {
   return (
@@ -16,8 +16,8 @@ function History() {
     <BrowserRouter>
       <Routes>
         <Route  path="/dashboard" component={ <Dashboard />}/>
-        <Route  path="/pacientes" component={ <IndexPacientes />}/>
-        <Route  path="/sessoes" component={ <IndexSessoes />}/>
+        <Route  path="/patients" component={ <IndexPatient />}/>
+        <Route  path="/sessions" component={ <IndexSession />}/>
       </Routes>
     </BrowserRouter>
     </>
