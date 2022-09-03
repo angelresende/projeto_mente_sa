@@ -12,7 +12,7 @@
 ## 🛠️ Tecnologias Utilizadas
 
 <h3>Front-End</h3>
-- [ReactJS] (https://reactjs.org/);
+- [ReactJS](https://reactjs.org/);
 
 <h3>Back-End</h3>
 - [NodeJs](https://nodejs.org/en/);
@@ -21,11 +21,6 @@
 <h3>Documentação</h3>
 - [Swagger](https://swagger.io/);
 
-
-- [Python](https://www.python.org/);
-- [Django](https://www.djangoproject.com/);
-- [MySQL](https://www.mysql.com/);
-- [JQuery](https://jquery.com/);
 
 ## Passos iniciais
 
