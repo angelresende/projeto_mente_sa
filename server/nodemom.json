@@ -4,6 +4,6 @@
         "MYSQL_PASSWORD": "oracle",
         "MYSQL_DATABASE": "ong_mente_sa",
         "MYSQL_HOST": "localhost",
-        "MYSQL_PORT": 3360
+        "MYSQL_PORT": 3306
     }
 }

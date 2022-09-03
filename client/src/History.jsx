@@ -8,7 +8,7 @@ import Dashboard from './pages/dashboard/Dashboard'
 import './assets/styles/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import IndexPatient from './pages/patient/IndexPatient'
-import IndexSession from './pages/sessoes/IndexSession'
+import IndexSession from './pages/session/IndexSession'
 
 function History() {
   return (

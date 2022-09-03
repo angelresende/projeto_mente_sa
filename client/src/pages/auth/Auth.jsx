@@ -52,6 +52,9 @@ function Auth() {
           <FormProfessional />
         </Modal.Body>
         <Modal.Footer>
+        <Button id='buttonCancel'  onClick={handleClose}>
+            Cancelar
+            </Button>
           <Button id='buttonSave' onClick={handleClose}>
             Login
           </Button>

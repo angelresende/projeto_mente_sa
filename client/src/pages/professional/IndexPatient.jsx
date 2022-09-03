@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Sidebar from '../../components/Sidebar';
-import TablePatient from '../../components/TablePatients';
+import TableProfessional from '../../components/TableProfessionals';
 
 function IndexPatient() {
 
@@ -12,7 +12,7 @@ function IndexPatient() {
         <div className="content">
           <div className="container-fluid">
             <div className='table-wrapper'>          
-              <TablePatient />
+              <TableProfessional />
             </div>
           </div>
         </div>
