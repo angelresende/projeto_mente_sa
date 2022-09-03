@@ -22,6 +22,11 @@
 - [Swagger](https://swagger.io/);
 
 
+- [Python](https://www.python.org/);
+- [Django](https://www.djangoproject.com/);
+- [MySQL](https://www.mysql.com/);
+- [JQuery](https://jquery.com/);
+
 ## Passos iniciais
 
 #### Clone o repositório:
