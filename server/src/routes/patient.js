@@ -1,41 +1,104 @@
 const express = require('express');
 const router = express.Router();
+const mysql = require('../../mysql').pool;
 
-//RETORNA TODOS OS PACIENTES
-router.get('/', (req, res, next) =>{
-    res.status(200).send({
-        message: 'Usando o GET dentro da rota cadastrar professional'
+router.get('/', (req, res, next) =>{  
+    
+    mysql.getConnection((error, conn) =>{
+        if (error) { console.error(error); res.status(500).send({ error: error }) }
+
+        conn.query(
+            'SELECT * FROM patient;',        
+            (error, result, field) =>{            
+                if (error) { console.error(error); res.status(500).send({ error: error }) }
+                return res.status(200).send({response: result});;
+            }
+        )
+    });
+
+});
+
+router.get('/:id', (req, res, next) =>{
+    mysql.getConnection((error, conn) =>{
+        if (error) { console.error(error); res.status(500).send({ error: error }) }
+
+        conn.query(
+            'SELECT * FROM patient WHERE id = ?;',       
+            [req.params.id], 
+            (error, result, field) =>{            
+                if (error) { return res.status(500).send({ error: error }) }
+                return res.status(200).send({response: result});;
+            }
+        )
     });
 });
 
-//RETORNA OS DADOS DE UM PACIENTE ESPECÍFICO
-router.get('/:id_patient', (req, res, next) =>{
-    const id = req.params.id_patient
-    res.status(200).send({
-        message: 'Usando o GET de um patient exclusivo',
-        id_patient: id
-    });;
-});
-
-//INSERE UM PACIENTE
 router.post('/', (req, res, next) =>{
-    res.status(201).send({
-        message: 'Usando o POST dentro da rota cadastrar patient'
-    });;
+    mysql.getConnection((error, conn) =>{
+        if (error) { return res.status(500).send({ error: error }) }
+
+        conn.query(
+            'INSERT INTO patient(nome, cpf, email, genero, data_nascimento) VALUES (?, ?, ?, ?, ?)',
+            [req.body.nome, req.body.cpf, req.body.email, req.body.genero, req.body.data_nascimento],
+            
+            (error, result, field) =>{
+                if (error) { return res.status(500).send({ error: error }) }
+
+                res.status(201).send({
+                    message: 'Paciente cadastrado com sucesso',
+                    id: result.insertId
+                });;
+            }
+        )
+    })
 });
 
-//ALTERA OS DADOS DE UM PACIENTE ESPECÍFICO
 router.patch('/', (req, res, next) =>{
-    res.status(200).send({
-        message: 'Usando o PATCH dentro da rota de patient'
-    });;
+    mysql.getConnection((error, conn) =>{
+        if (error) { return res.status(500).send({ error: error }) }
+
+        conn.query(
+            `UPDATE patient
+                SET nome            = ?, 
+                    cpf             = ?,
+                    email           = ?,
+                    genero          = ?,
+                    data_nascimento = ?,
+            WHERE   id              = ?`,
+            [   
+                req.body.nome, 
+                req.body.cpf, 
+                req.body.email, 
+                req.body.genero, 
+                req.body.data_nascimento,
+                req.body.id
+            ],            
+            (error, result, field) =>{
+                if (error) { return res.status(500).send({ error: error }) }
+
+                res.status(202).send({
+                    message: 'Paciente atualizado com sucesso',
+                });;
+            }
+        )
+    })
 });
 
-//DELETA OS DADOS DE UM PACIENTE ESPECÍFICO
 router.delete('/', (req, res, next) =>{
-    res.status(200).send({
-        message: 'Usando o DELETE dentro da rota de patient'
-    });;
+    mysql.getConnection((error, conn) =>{
+        if (error) { return res.status(500).send({ error: error }) }
+
+        conn.query(
+            'DELETE FROM patient WHERE id = ?', [req.body.id],            
+            (error, result, field) =>{
+                if (error) { return res.status(500).send({ error: error }) }
+
+                res.status(202).send({
+                    message: 'Paciente removido com sucesso',
+                });;
+            }
+        )
+    })
 });
 
 module.exports = router;

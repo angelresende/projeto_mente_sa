@@ -9,7 +9,7 @@ const swaggerDocument = require('./src/swagger.json');
 
 const professionals = require('./src/routes/professional');
 const patients = require('./src/routes/patient');
-const sessions = require('./src/routes/sessions');
+const sessions = require('./src/routes/session');
 const terms = require('./src/routes/terms');
 
 app.use(morgan('dev'));

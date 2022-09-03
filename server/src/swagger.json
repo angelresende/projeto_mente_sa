@@ -27,23 +27,10 @@
                             "schema": {
                                 "$ref": "#/components/schemas/Professional"
                             }
-                        },
-                        "examples":{
-                            "professional":{
-                                "value":{
-                                    "nome": "Maria da Silva",
-                                    "crp": "98765/99",
-                                    "contato": 22987541236,
-                                    "abordagem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non dui maximus, sagittis diam ac"
-                                }
-                            }
                         }
                     }
                 },
                 "responses":{
-                    "400": {
-                        "description": "Professional Already exists"
-                    },
                     "200": {
                         "description": "OK",
                         "content": {
@@ -59,13 +46,31 @@
             },
             "get":{
                 "summary": "Lista de profissionais cadastros dentro do sistema",
-                "description": "Essa rota será responsável por apresentar os profissionais cadastrados no sistema."
-            },
-            "patch":{
-                "summary": "Lista de profissionais cadastros dentro do sistema",
-                "description": "Essa rota será responsável por apresentar os profissionais cadastrados no sistema."
-            }           
-
+                "description": "Essa rota será responsável por apresentar os profissionais cadastrados no sistema.",
+                "tags": ["Professionals"],
+                "requestBody": {
+                    "content":{
+                        "application/json":{
+                            "schema": {
+                                "$ref": "#/components/schemas/Professional"
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "schema": {
+                                "type": "object",
+                                "items":{
+                                    "$ref": "#/components/schemas/Professional"
+                                }
+                            }
+                        }
+                    }
+                }
+            }       
         }
     },
     "components": {

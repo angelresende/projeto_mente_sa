@@ -8,7 +8,7 @@ router.get('/', (req, res, next) =>{
         if (error) { console.error(error); res.status(500).send({ error: error }) }
 
         conn.query(
-            'SELECT * FROM professional;',        
+            'SELECT * FROM session;',        
             (error, result, field) =>{            
                 if (error) { console.error(error); res.status(500).send({ error: error }) }
                 return res.status(200).send({response: result});;
@@ -23,7 +23,7 @@ router.get('/:id', (req, res, next) =>{
         if (error) { console.error(error); res.status(500).send({ error: error }) }
 
         conn.query(
-            'SELECT * FROM professional WHERE id = ?;',       
+            'SELECT * FROM session WHERE id = ?;',       
             [req.params.id], 
             (error, result, field) =>{            
                 if (error) { return res.status(500).send({ error: error }) }
@@ -34,19 +34,37 @@ router.get('/:id', (req, res, next) =>{
 });
 
 router.post('/', (req, res, next) =>{
-
     mysql.getConnection((error, conn) =>{
         if (error) { return res.status(500).send({ error: error }) }
 
         conn.query(
-            'INSERT INTO professional(nome, crp, contato, abordagem) VALUES (?, ?, ?, ?)',
-            [req.body.nome, req.body.crp, req.body.contato, req.body.abordagem],
+            `INSERT INTO session(
+                    professional_id, 
+                    patient_id, 
+                    data_agendamento, 
+                    status, 
+                    tema_abordado, 
+                    tipo_agendamento,
+                    duracao, 
+                    tipo_sessao
+                ) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+            [      
+                req.body.professional_id, 
+                req.body.patient_id, 
+                req.body.data_agendamento, 
+                req.body.status, 
+                req.body.tema_abordado,
+                req.body.tipo_agendamento,
+                req.body.duracao,
+                req.body.tipo_sessao
+            ],
             
             (error, result, field) =>{
                 if (error) { return res.status(500).send({ error: error }) }
 
                 res.status(201).send({
-                    message: 'Profissional cadastrado com sucesso',
+                    message: 'Sessão cadastrada com sucesso',
                     id: result.insertId
                 });;
             }
@@ -59,24 +77,32 @@ router.patch('/', (req, res, next) =>{
         if (error) { return res.status(500).send({ error: error }) }
 
         conn.query(
-            `UPDATE professional
-                SET nome        = ?, 
-                    crp         = ?,
-                    contato     = ?,
-                    abordagem   = ?
-            WHERE   id          = ?`,
+            `UPDATE session
+                SET professional_id     = ?, 
+                    patient_id          = ?,
+                    data_agendamento    = ?,
+                    status              = ?,
+                    tema_abordado       = ?,
+                    tipo_agendamento    = ?,
+                    duracao             = ?, 
+                    tipo_sessao         = ?,
+            WHERE   id                  = ?`,
             [   
-                req.body.nome, 
-                req.body.crp, 
-                req.body.contato, 
-                req.body.abordagem, 
+                req.body.professional_id, 
+                req.body.patient_id, 
+                req.body.data_agendamento, 
+                req.body.status, 
+                req.body.tema_abordado,
+                req.body.tipo_agendamento,
+                req.body.duracao,
+                req.body.tipo_sessao,
                 req.body.id
             ],            
             (error, result, field) =>{
                 if (error) { return res.status(500).send({ error: error }) }
 
                 res.status(202).send({
-                    message: 'Profissional atualizado com sucesso',
+                    message: 'Sessão atualizada com sucesso',
                 });;
             }
         )
@@ -88,12 +114,12 @@ router.delete('/', (req, res, next) =>{
         if (error) { return res.status(500).send({ error: error }) }
 
         conn.query(
-            'DELETE FROM professional WHERE id = ?', [req.body.id],            
+            'DELETE FROM session WHERE id = ?', [req.body.id],            
             (error, result, field) =>{
                 if (error) { return res.status(500).send({ error: error }) }
 
                 res.status(202).send({
-                    message: 'Profissional removido com sucesso',
+                    message: 'Sessão removida com sucesso',
                 });;
             }
         )
