@@ -12,7 +12,7 @@
 ## 🛠️ Tecnologias Utilizadas
 
 <h3>Front-End</h3>
-- [ReactJS](https://reactjs.org/);
+- [ReactJS] (https://reactjs.org/);
 
 <h3>Back-End</h3>
 - [NodeJs](https://nodejs.org/en/);
