@@ -21,7 +21,6 @@
 
 #### Clone o repositório:
 
-```bash
 git clone https://github.com/angelresende/projeto_mente_sa
 cd client (para front-end)
 instalação das dependencias:  npm install
