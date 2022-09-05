@@ -6,7 +6,7 @@ function Dashboard() {
   return (
     <>
     <Container>
-    <Sidebar />
+
     <div className="content-page">
         <div className="content">
           <Row className="flex">

@@ -8,7 +8,7 @@ function IndexSession() {
   return (
     <>
       <Sidebar/>
-      <div className='container-xl'>
+      <div className='container-fluid'>
         <div className='table-wrapper'>
           <TableSessions />
         </div>

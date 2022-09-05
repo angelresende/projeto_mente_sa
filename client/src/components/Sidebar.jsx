@@ -24,7 +24,7 @@ function Sidebar() {
             </li>
             
             <li>
-                <a href="/patients" className="waves-effect"><FontAwesomeIcon icon={faUser} /> Pacientes</a>
+                <a href="/pacientes" className="waves-effect"><FontAwesomeIcon icon={faUser} /> Pacientes</a>
             </li>
                             
             <li>
