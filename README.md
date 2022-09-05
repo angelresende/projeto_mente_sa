@@ -22,7 +22,7 @@
 #### Clone o repositório:
 
 ```bash
-git clone --depth 1 https://github.com/angelresende/projeto_mente_sa
+git clone https://github.com/angelresende/projeto_mente_sa
 cd client (para front-end)
 npm run dev
 
