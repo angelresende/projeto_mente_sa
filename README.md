@@ -24,27 +24,13 @@
 ```bash
 git clone https://github.com/angelresende/projeto_mente_sa
 cd client (para front-end)
-#### Instalação das dependencias:
-
-```bash
-npm i
-```
+instalação das dependencias:  npm install
 npm run dev
 
 cd server (para back-end)
-#### Instalação das dependencias:
-
-```bash
-npm i
-```
+instalação das dependencias: npm install
 npm start
-```
 
-#### Instalação das dependencias:
-
-```bash
-npm i
-```
 
 #### Definir as variáveis de ambiente:
 
