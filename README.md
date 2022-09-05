@@ -19,11 +19,13 @@
 
 ## Passos iniciais
 
-```bash 
 #### Clone o repositório:
+```bash 
 git clone https://github.com/angelresende/projeto_mente_sa
+```
 
-
+#### Acesse o repositório:
+```bash 
 cd client (para front-end)
 instalação das dependencias:  npm install
 npm run dev
