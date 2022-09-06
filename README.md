@@ -20,20 +20,19 @@
 ## Passos iniciais
 
 #### Clone o repositório:
-
-```bash
+```bash 
 git clone https://github.com/angelresende/projeto_mente_sa
+```
+
+#### Acesse o repositório:
+```bash 
 cd client (para front-end)
+instalação das dependencias:  npm install
 npm run dev
 
 cd server (para back-end)
+instalação das dependencias: npm install
 npm start
-```
-
-#### Instalação das dependencias:
-
-```bash
-npm i
 ```
 
 #### Definir as variáveis de ambiente:
