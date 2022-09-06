@@ -7,7 +7,7 @@ function IndexPatient() {
 
   return (
     <>
-      <Sidebar />
+    <Sidebar />
       <div className='content-page'>
         <div className="content">
           <div className="container-fluid">

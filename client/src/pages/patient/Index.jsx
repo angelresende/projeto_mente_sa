@@ -1,18 +1,18 @@
 import React from 'react'
 
 import Sidebar from '../../components/Sidebar';
-import TablePatient from '../../components/TablePatients';
+import TablePatients from '../../components/TablePatients';
 
 function IndexPatient() {
 
   return (
     <>
-      <Sidebar />
+    <Sidebar />
       <div className='content-page'>
         <div className="content">
           <div className="container-fluid">
             <div className='table-wrapper'>          
-              <TablePatient />
+              <TablePatients />
             </div>
           </div>
         </div>

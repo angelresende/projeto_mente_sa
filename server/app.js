@@ -7,6 +7,7 @@ const bodyParser = require('body-parser')
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./src/swagger.json');
 
+const dash = require('./src/routes/dashboard')
 const professionals = require('./src/routes/professional');
 const patients = require('./src/routes/patient');
 const sessions = require('./src/routes/session');
@@ -18,6 +19,7 @@ app.use(bodyParser.json());
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+app.use('/dashboard', dash);
 app.use('/professionals', professionals);
 app.use('/patients', patients);
 app.use('/sessions', sessions);

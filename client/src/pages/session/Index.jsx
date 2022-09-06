@@ -1,19 +1,21 @@
 import React from 'react'
-
-import Sidebar from '../../components/Sidebar';
 import TableSessions from '../../components/TableSessions';
+import Sidebar from '../../components/Sidebar';
 
 function IndexSession() {
 
   return (
     <>
-      <Sidebar/>
-      <div className='container-fluid'>
-        <div className='table-wrapper'>
-          <TableSessions />
+    <Sidebar />
+      <div className='content-page'>
+        <div className="content">
+          <div className="container-fluid">
+            <div className='table-wrapper'>          
+              <TableSessions />
+            </div>
+          </div>
         </div>
-      </div> 
-                   
+      </div>                   
         
     </>
   )

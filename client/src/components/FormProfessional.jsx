@@ -3,7 +3,6 @@ import {Form } from 'react-bootstrap';
 
 function FormProfessional() {
 
-
   return (
     <Form className='mt-2'>
     <Form.Group className="mb-3" controlId="ControlInputName">
@@ -16,22 +15,19 @@ function FormProfessional() {
     <Form.Group className="mb-3" controlId="ControlInputEmail">
       <Form.Control
         type="email"
-        placeholder="E-mail"
-        autoFocus
+        placeholder="E-mail"        
       />
     </Form.Group>
     <Form.Group className="mb-3" controlId="ControlInputPassword">
       <Form.Control
         type="password"
-        placeholder="Senha"
-        autoFocus
+        placeholder="Senha"        
       />
     </Form.Group>
     <Form.Group className="mb-3" controlId="ControlInputPasswordConfirm">
       <Form.Control
         type="password"
         placeholder="Confirme sua senha"
-        autoFocus
       />
     </Form.Group>
     <Form.Group className="mb-3" controlId="formBasicCheckbox">

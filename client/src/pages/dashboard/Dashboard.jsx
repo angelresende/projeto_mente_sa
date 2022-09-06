@@ -1,12 +1,13 @@
 import React from 'react'
-import Sidebar from '../../components/Sidebar'
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Card } from 'react-bootstrap';
+import Sidebar from '../../components/Sidebar';
+
 
 function Dashboard() {
   return (
     <>
+    <Sidebar />
     <Container>
-
     <div className="content-page">
         <div className="content">
           <Row className="flex">

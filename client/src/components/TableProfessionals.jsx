@@ -17,14 +17,12 @@ function TableProfessionals() {
       <div className='row'>
       <div className='col-sm-6'>
           <h4 style={{color:'#666666', fontSize: 32}}>Minhas Sessões</h4>
-        </div>
-        <div className="col-sm-4">
-        </div>      
-        <div className='col-sm-2'>
+        </div>     
+        <Col sm={2}>
             <Button className='btn btn-success float-right' id='buttonPlus' onClick={handleShow}>
                 <FontAwesomeIcon icon={faPlus} /> Nova Sessão
             </Button> 
-        </div>
+        </Col>
       </div>
     </div>
     
