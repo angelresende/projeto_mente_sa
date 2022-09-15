@@ -39,7 +39,7 @@ app.use((req, res, next) =>{
     next();
 });
 
-//QUANDO NÃO ENCONTRA NENHUMA ROTA, ENTRA AQUI:
+
 app.use((req, res, next) =>{
     const error = new Error('Not Found');
     error.status = 404;

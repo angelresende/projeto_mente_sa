@@ -33,7 +33,7 @@ router.get('/:id', (req, res, next) =>{
     });
 });
 
-router.post('/', (req, res, next) =>{
+router.post('/create', (req, res, next) =>{
     mysql.getConnection((error, conn) =>{
         if (error) { return res.status(500).send({ error: error }) }
 
@@ -72,7 +72,7 @@ router.post('/', (req, res, next) =>{
     })
 });
 
-router.patch('/', (req, res, next) =>{
+router.patch('/update', (req, res, next) =>{
     mysql.getConnection((error, conn) =>{
         if (error) { return res.status(500).send({ error: error }) }
 
@@ -109,7 +109,7 @@ router.patch('/', (req, res, next) =>{
     })
 });
 
-router.delete('/', (req, res, next) =>{
+router.delete('/delete', (req, res, next) =>{
     mysql.getConnection((error, conn) =>{
         if (error) { return res.status(500).send({ error: error }) }
 
