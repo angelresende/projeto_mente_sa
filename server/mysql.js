@@ -8,10 +8,10 @@ var pool = mysql.createPool({
     // "port": process.env.MYSQL_PORT,
 
     "user": "root",
-    "password": "oracle",
+    "password": "Shiryu2905!",
     "database": "ong_mente_sa",
     "host": "localhost",
-    "port": 3360,
+    "port": 3306,
 });
 
 exports.pool = pool;

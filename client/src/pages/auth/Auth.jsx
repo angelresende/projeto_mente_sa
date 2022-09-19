@@ -32,7 +32,7 @@ function Auth() {
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Col className='colLogin'><Form.Check type="checkbox" label="Lembrar Usuário"  /><label style={{ textAlign:'right' }}>Esqueci a senha?</label></Col>            
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Group className="mb-3">
             <Col className='sm-6' style={{ textAlign:'center' }}><label onClick={handleShow}>Criar Conta</label> </Col> 
           </Form.Group>
           <Button type="submit" id='buttonLogin'>

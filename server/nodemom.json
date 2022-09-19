@@ -1,7 +1,7 @@
 {
     "env":{
         "MYSQL_USER": "root",
-        "MYSQL_PASSWORD": "oracle",
+        "MYSQL_PASSWORD": "Shiryu2905!",
         "MYSQL_DATABASE": "ong_mente_sa",
         "MYSQL_HOST": "localhost",
         "MYSQL_PORT": 3306
