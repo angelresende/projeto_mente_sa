@@ -24,12 +24,6 @@ function FormProfessional() {
         placeholder="Senha"        
       />
     </Form.Group>
-    <Form.Group className="mb-3" controlId="ControlInputPasswordConfirm">
-      <Form.Control
-        type="password"
-        placeholder="Confirme sua senha"
-      />
-    </Form.Group>
     <Form.Group className="mb-3" controlId="formBasicCheckbox">
       <Form.Check type="checkbox" label="Aceito os termos e políticas de privacidade"  />            
     </Form.Group>

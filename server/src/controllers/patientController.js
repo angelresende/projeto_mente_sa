@@ -1,7 +1,6 @@
 const mysql = require('../../mysql').pool;
 
-exports.getPatients = (req, res, next) =>{  
-    
+exports.getPatients = (req, res, next) =>{      
     mysql.getConnection((error, conn) =>{
         if (error) { console.error(error); res.status(500).send({ error: error }) }
 
@@ -60,7 +59,7 @@ exports.updatePatient = (req, res, next) =>{
                     cpf             = ?,
                     email           = ?,
                     genero          = ?,
-                    data_nascimento = ?,
+                    data_nascimento = ?
             WHERE   id              = ?`,
             [   
                 req.body.nome, 

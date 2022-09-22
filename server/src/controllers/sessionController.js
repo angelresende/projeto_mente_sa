@@ -83,7 +83,7 @@ exports.updateSession = (req, res, next) =>{
                     tema_abordado       = ?,
                     tipo_agendamento    = ?,
                     duracao             = ?, 
-                    tipo_sessao         = ?,
+                    tipo_sessao         = ?
             WHERE   id                  = ?`,
             [   
                 req.body.professional_id, 

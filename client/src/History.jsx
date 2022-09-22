@@ -13,7 +13,7 @@ function History() {
     <>
     <Router>
       <Routes>
-        <Route  path="/auth" element={ <Auth />}/>
+        <Route  path="/" element={ <Auth />}/>
         <Route  path="/dashboard" element={ <Dashboard />}/>
         <Route  path="/profissionais" element={ <IndexProfessional />}/>
         <Route  path="/pacientes" element={ <IndexPatient />}/>

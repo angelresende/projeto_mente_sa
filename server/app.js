@@ -12,6 +12,7 @@ const professionals = require('./src/routes/professional');
 const patients = require('./src/routes/patient');
 const sessions = require('./src/routes/session');
 const terms = require('./src/routes/terms');
+const user = require('./src/routes/user');
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+app.use('/register', user);
 app.use('/dashboard', dash);
 app.use('/professionals', professionals);
 app.use('/patients', patients);
