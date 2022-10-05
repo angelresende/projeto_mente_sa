@@ -16,7 +16,7 @@
         }
     ],
     "paths":{
-        "/professionals":{
+        "/professionals/create":{
             "post":{
                 "summary": "Cadastro de profissionais dentro do sistema",
                 "description": "Essa rota será responsável por cadastrar os profissionais no sistema.",

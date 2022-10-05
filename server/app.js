@@ -11,7 +11,6 @@ const dash = require('./src/routes/dashboard')
 const professionals = require('./src/routes/professional');
 const patients = require('./src/routes/patient');
 const sessions = require('./src/routes/session');
-const terms = require('./src/routes/terms');
 const user = require('./src/routes/user');
 
 app.use(morgan('dev'));
@@ -25,7 +24,6 @@ app.use('/dashboard', dash);
 app.use('/professionals', professionals);
 app.use('/patients', patients);
 app.use('/sessions', sessions);
-app.use('/terms', terms);
 
 app.use((req, res, next) =>{
     res.header('Access-Control-Allow-Origin', '*');

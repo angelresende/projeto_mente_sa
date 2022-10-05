@@ -10,7 +10,7 @@ body {
     margin: auto; 
     float: none; 
     width: 22rem;
-    top: 48px;
+    top: 6rem;
 
     background: #FFFFFF;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
@@ -87,21 +87,18 @@ body {
 /******* Sidemenu *******/
 .side-menu {
   position: absolute;
-  width: 245px;
+  width: 240px;
   background: #6813D5;
-  height: 982px;
+  height: 100vh;
   left: 0px;
   top: 0px;
 }
 
 #mentesa{
-  /* Mente Sã */
+  /* Mente Sã */ 
   position: absolute;
-  width: 179px;
-  height: 49px;
-  left: 21px;
+  left: 30px;
   top: 22px;
-  left: 16px;
 
   font-family: 'Roboto';
   font-style: normal;
@@ -113,37 +110,35 @@ body {
 }
 
 #bem_vindo{
-  width: 90px;
-  height: 16px;
-  top: 22px;
-
+  margin-top: 1rem;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 16px;
 
   color: #FFFFFF;
 }
 
 #name_professional{        
-  width: 77px;
-  height: 16px;
-
+  margin-top: 1rem;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 28px;
   line-height: 16px;
 
   color: #FFFFFF;
 }
 
 #sidebar-menu > ul > li > a {
-  top: 140px;
+  display: grid !important;
+  grid-template-columns: max-content auto !important;
+  top: 190px;
   width: 92px;
-  height: 28px;
-  left: 10px;
+  text-decoration: none !important;
+  column-gap: 2rem !important;
+  padding: 0.5rem 0 0.5rem 1.5rem !important;
   color: #FFFFFF;
   font-size: 24px;
   font-weight: 700;
@@ -152,14 +147,15 @@ body {
   transition: all 0.5s;
   font-family: 'Roboto';
   font-style: normal;
-  text-decoration: none;
-
 }
 
-#sidebar-menu > ul > li > a:hover, #sidebar-menu > ul > li > a:focus, #sidebar-menu > ul > li > a:active {
+#sidebar-menu > ul > li > a:hover, 
+#sidebar-menu > ul > li > a:focus, 
+#sidebar-menu > ul > li > a:active 
+ {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   padding: 10px;
   gap: 10px;
 
@@ -176,6 +172,29 @@ body {
   order: 0;
   flex-grow: 0;
 } 
+
+.nav-link-icon{
+  cursor: pointer !important;
+  padding: 5px !important;
+  margin-right: -0.5rem !important;
+  line-height: 1 !important;
+  width: 20px !important;
+  height: 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.nav-link-name{
+  font-weight: 700 !important;
+}
+
+#logout{
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff !important;
+}
+
 
 /******* Content Page *******/
 .content-page {
@@ -216,15 +235,10 @@ body {
 }
 
 .item-title {
-  width: 162px;
-  height: 42px;
-
+  height: 50px;
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-
+  text-align: center;
   color: #666666;
 }
 

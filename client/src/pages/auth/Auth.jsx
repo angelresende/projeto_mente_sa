@@ -1,12 +1,23 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {Form, Button, Col, Modal, Card } from 'react-bootstrap';
 import FormProfessional from '../../components/FormProfessional';
+import { AuthContext } from '../../contexts/AuthContext';
 
 function Auth() {
+  const { authenticated, login } = useContext(AuthContext);
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
+
   const handleShow = () => setShow(true);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    login(email, password)
+  }
 
   return (
     <Card className='auth'>
@@ -14,22 +25,30 @@ function Auth() {
       <div style={{color: '#6813D5', textAlign: 'center', fontSize:32}}><strong>Mente Sã</strong></div>
         <p style={{color: '#6813D5', fontSize:24}}>Bem vindo ao sistema</p>
         <span style={{color: '#AAAAAA', fontSize:16}}>Por favor entre com sua conta</span>
-        <Form className='mt-2'>
-          <Form.Group className="mb-3" controlId="ControlInputEmail">
+        <Form className='mt-2' onSubmit={handleSubmit}>
+          <Form.Group className="mb-3">
             <Form.Control
-              type="email"
+              type='email'
+              name='email'
+              id='email'
               placeholder="E-mail"
               autoFocus
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="ControlInputPassword">
+          <Form.Group className="mb-3">
             <Form.Control
-              type="password"
+              type='password'
+              name='password'
+              id='password'
               placeholder="Senha"
               autoFocus
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Group className="mb-3">
             <Col className='colLogin'><Form.Check type="checkbox" label="Lembrar Usuário"  /><label style={{ textAlign:'right' }}>Esqueci a senha?</label></Col>            
           </Form.Group>
           <Form.Group className="mb-3">
