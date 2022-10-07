@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faEdit, faTrash, faEye, faSearch } from '@fortawesome/free-solid-svg-icons'
 import { Modal, Button, Table, Row, Col, Form  } from 'react-bootstrap';
@@ -10,6 +10,7 @@ function TablePatients() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
 
   return (
     <>
@@ -77,7 +78,7 @@ function TablePatients() {
         
     <Modal show={show}>
         <Modal.Header>
-            <Modal.Title style={{color: '#6813D5', textAlign: 'center'}}>Cadastro do patient</Modal.Title>
+            <Modal.Title style={{color: '#6813D5', textAlign: 'center'}}>Cadastro do paciente</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <FormPatient />
